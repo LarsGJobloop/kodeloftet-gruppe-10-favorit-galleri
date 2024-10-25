@@ -12,7 +12,20 @@ for (let imageCard of allImageCards) {
   });
 }
 
-// Favoritt funksjonen
+/**
+ * Favorit funksjonen
+ *
+ * @param {Element} card
+ */
 function toggleFavorited(card) {
-  console.log(card);
+  // Hent ut bilde url og bilde navn
+  let image = card.querySelector("img");
+
+  // Lag bilde objektet
+  let imageObject = {
+    url: image.src,
+    name: image.alt,
+  };
+
+  console.log(imageObject);
 }
